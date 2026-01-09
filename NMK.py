@@ -273,7 +273,7 @@ HTML_TEMPLATE = """
 def check_password():
     """Returns `True` if the user had the correct password."""
     # Look for password in secrets, otherwise default to a simple one for first-run ease
-    correct_password = st.secrets.get("APP_PASSWORD", "hseadmin") 
+    correct_password = st.secrets.get("APP_PASSWORD") 
 
     if "password_correct" not in st.session_state:
         st.session_state.password_correct = False
